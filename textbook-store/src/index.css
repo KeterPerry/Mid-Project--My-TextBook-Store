@@ -1,0 +1,35 @@
+
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+html{  
+  font-size: 10px;
+}
+
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background: #00b4ff;
+	color: #333;
+	font: 100% Lato, Arial, Sans Serif;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+#root{
+  width: 100vw;
+  height: 100vh;
+  }
+
+  
+ 

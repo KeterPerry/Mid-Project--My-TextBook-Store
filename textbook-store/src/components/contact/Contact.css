@@ -1,0 +1,51 @@
+
+ 
+ .contact-Container{
+   
+ justify-content: center;
+ align-items: center;
+ margin-top: 5rem;
+
+
+    
+ }
+ 
+ 
+ .contact-container
+ { 
+    margin-top: 20rem;
+    margin: auto auto;
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+    height: 40rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 2rem;
+    
+  }
+
+
+.contact-container  input{
+    width: 80%;
+}
+
+@media (max-width: 768px){
+   .contact-container{
+    display: flex;
+    flex-direction: column;
+    width:35rem;
+   } 
+   .contact-container  input{
+    width: 60%;
+}
+   
+   .text-area{
+    width:20rem;  
+    height:10rem;
+   }
+}
+
+
