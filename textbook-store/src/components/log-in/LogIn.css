@@ -55,7 +55,7 @@ form {
     border: 2px solid black;
     border-radius: 5%; 
   }
-  .item{
+  .items{
     width: 10rem;
   }
   /* Full-width inputs */
@@ -79,8 +79,8 @@ form {
     width: 100%;
   }
   .back{
-    width: 3rem; 
-    height: 3rem;
+    width: 10rem; 
+    height: 4rem;
   }
   
   /* Add a hover effect for buttons */

@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import BookUpdate from "../../components/BookUpdate";
 
 import "./LogIn.css";
@@ -29,14 +29,15 @@ export default function LogIn() {
     setBooksToUpdate,
     // titleUpdate,
     // setTitleUpdate,
-    imageUpdate,
-    setImageUpdate,
-    priceUpdate,
-    setPriceUpdate,
+    // imageUpdate,
+    // setImageUpdate,
+    // priceUpdate,
+    // setPriceUpdate,
     isDisplay1,
     setDisplay1,
   } = useContext(myContext);
-  const [titleUpdate, setTitleUpdate] = useState("");
+
+  // const [titleUpdate, setTitleUpdate] = useState("");
 
   //////////////////////////////////////////////////////////////////////////
   const handleChange = (e, id) => {
@@ -62,7 +63,7 @@ export default function LogIn() {
       setDisplay("none");
       setDisplay1("");
     } else {
-      alert("Invalid email or Password");
+      alert("Invalid email or password");
     }
   };
 
@@ -121,38 +122,39 @@ export default function LogIn() {
   // UPDATE
 
   const handleUpdate = async () => {
-    setPopUp(true);
     const { data } = await axios.get(
       "https://629dace63dda090f3c07a72b.mockapi.io/books"
     );
     console.log(data);
     setData(data);
+    setPopUp(true);
 
-    const booksToUpdate = dataArr.map((book) => <BookUpdate {...book} />);
+    const booksToUpdate = data.map((book) => <BookUpdate {...book} />);
 
     setBooksToUpdate(booksToUpdate);
   };
   //////////////////////////////////////////////////////////////
-  const handleConfirm = async (id) => {
-    const bookToUpdate = dataArr.find((book) => book.id === id);
+  // const handleConfirm = async (id) => {
+  //
+  //   const bookToUpdate = dataArr.find((book) => book.id === id);
 
-    const updatedBook = {
-      ...bookToUpdate,
-      title: titleUpdate,
-      image: imageUpdate,
-      price: priceUpdate,
-    };
-    const { data } = await axios.put(
-      `https://628e25fba339dfef87a87ada.mockapi.io/people/${id}`,
-      updatedBook
-    );
-    setData((prev) => {
-      return prev.map((book) => {
-        if (book.id === id) return data;
-        else return book;
-      });
-    });
-  };
+  //   const updatedBook = {
+  //     ...bookToUpdate,
+  //     title: titleUpdate,
+  //     image: imageUpdate,
+  //     price: priceUpdate,
+  //   };
+  //   const { data } = await axios.put(
+  //     `https://628e25fba339dfef87a87ada.mockapi.io/people/${id}`,
+  //     updatedBook
+  //   );
+  //   setData((prev) => {
+  //     return prev.map((book) => {
+  //       if (book.id === id) return data;
+  //       else return book;
+  //     });
+  //   });
+  // };
 
   const handlePopUp = () => {
     setPopUp(false);
@@ -231,11 +233,7 @@ export default function LogIn() {
       {popUp && (
         <div className="popUp">
           {booksToUpdate}
-          <button
-            onClick={handlePopUp}
-            className="back"
-            style={{ width: "30px", height: "2rem" }}
-          >
+          <button onClick={handlePopUp} className="back">
             Back
           </button>
         </div>

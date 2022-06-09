@@ -3,10 +3,11 @@ import React, { useState, useContext } from "react";
 import axios from "axios";
 
 export default function BookUpdate(book) {
-  const { setData } = useContext(myContext);
+  const { setData, setPopUp } = useContext(myContext);
   const [bookForms, setBookForms] = useState(book);
 
   const handleConfirm = async (id) => {
+    setPopUp(false);
     const updatedBook = bookForms;
     const { data } = await axios.put(
       `https://629dace63dda090f3c07a72b.mockapi.io/books/${id}`,
@@ -21,7 +22,7 @@ export default function BookUpdate(book) {
   };
 
   return (
-    <div key={bookForms.id} className="item">
+    <div key={bookForms.id} className="items">
       <input
         onChange={(e) => {
           setBookForms((prev) => ({ ...prev, title: e.target.value }));

@@ -49,7 +49,7 @@ export default function Contact() {
         <textarea
           className="text-area"
           rows="20"
-          cols="41"
+          cols="37"
           onChange={(e) => handleChange(e, e.target.id)}
           id="subject"
           name="subject"

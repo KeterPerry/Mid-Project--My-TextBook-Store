@@ -17,8 +17,11 @@
 }
 .item{
   
-    width: 18rem;
-    width: 18rem;
+  width: 15rem;
+  width: 15rem;
+}
+.item img{
+  max-width: 100%;
 }
 .loader {
     color: #ffffff;

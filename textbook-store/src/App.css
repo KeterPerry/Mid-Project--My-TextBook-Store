@@ -1,6 +1,7 @@
 
 
 .navbarC{
+  width:100%;
   border: 2px solid rgba(173, 159, 159, 0.173);
   display: flex;
   justify-content: center;
@@ -27,7 +28,7 @@
     height: 6rem;
     background-color: rgba(166, 204, 201, 0.344);
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     list-style: none;
     font-size: 2rem;
@@ -40,7 +41,10 @@
   }
 
   .link:hover {
-    font-size: 3rem;
+    font-size: 2.2rem;
+  }
+  .cart{
+    width: 15rem;
   }
   
   /* .App> .login-Container{

@@ -7,15 +7,8 @@ The project's main objective is creating and designing a Book Shop, including a 
 
 ### Features
 
-<!-- - Timer setting
-- Keeping track of wrong and correct answers
-- scroring method
-- fixing a pause between flipping a pair of cards
-- Multiple Game theme options
-- Different game levels
-- 2 players options
-- Score board
-- Sounds -->
+- CRUD from REST api
+- login
 
 ## Main Technologies:
 

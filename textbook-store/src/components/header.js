@@ -39,7 +39,7 @@ export default function Header() {
             Shop
           </NavLink>
         </li>
-        <li>
+        <li className="cart">
           {" "}
           <NavLink to="/products" className="link">
             <svg
