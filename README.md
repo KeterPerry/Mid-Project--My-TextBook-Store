@@ -18,6 +18,4 @@ The project's main objective is creating and designing a Book Shop, including a 
 
 ## Game Link
 
-[Mid Project - My Textbook Store]
-
-<!-- (https://memory-game-kts.netlify.app/) -->
+[Mid Project - My Textbook Store](https://my-textbook-store-mid-project.netlify.app/)

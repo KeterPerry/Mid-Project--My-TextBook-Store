@@ -52,7 +52,7 @@ export default function BooksWithCounter(book) {
   };
 
   return (
-    <div key={dataWithCounters.id} className="item">
+    <div key={book.id} className="item">
       <div>{dataWithCounters.title}</div>
       <img alt="#" src={dataWithCounters.image}></img>
       <div>{dataWithCounters.price}</div>

@@ -73,6 +73,7 @@ export default function LogIn() {
       title: title,
       image: image,
       price: price,
+      counter: 0,
     };
 
     try {
