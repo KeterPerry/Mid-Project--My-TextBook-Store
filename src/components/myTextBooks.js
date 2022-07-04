@@ -19,7 +19,6 @@ export default function MyTextBooks() {
         const { data } = await axios.get(
           "https://629dace63dda090f3c07a72b.mockapi.io/books"
         );
-        // console.log(data);
 
         const dataWithCounters = data.map((product) => {
           return { ...product, counter: 0 };

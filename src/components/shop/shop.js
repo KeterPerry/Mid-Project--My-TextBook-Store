@@ -42,7 +42,6 @@ export default function Shop() {
   /////////////////////////////////////////////////////
 
   const insertData = () => {
-    console.log(dataArr);
     //   return dataArr.map((book) => (
     //     <div key={book.id} className="item">
     //       <div>{book.title}</div>

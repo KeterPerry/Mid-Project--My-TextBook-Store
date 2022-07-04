@@ -1,7 +1,12 @@
-import React from "react";
+// import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { myContext } from "../context/myContext";
 
 export default function Header() {
+  const { cartCount } = useContext(myContext);
+  console.log(cartCount);
+
   return (
     <div className="navbarC">
       <ul className="navbarL">
@@ -41,7 +46,7 @@ export default function Header() {
         </li>
         <li className="cart">
           {" "}
-          <NavLink to="/products" className="link">
+          <NavLink to="/shop" className="link">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               version="1.1"
@@ -55,7 +60,7 @@ export default function Header() {
               <circle cx="143.8" cy="153" r="13"></circle>
               <circle cx="90.8" cy="153" r="13"></circle>
               <text
-                // fontSize="100"
+                style={{ fontSize: "100px" }}
                 data-hook="items-count"
                 className="LCo0H QVqyb"
                 textAnchor="middle"
@@ -63,7 +68,7 @@ export default function Header() {
                 y="35"
                 dy=".48em"
               >
-                0
+                {cartCount}
               </text>
             </svg>
           </NavLink>

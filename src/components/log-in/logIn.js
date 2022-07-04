@@ -55,7 +55,6 @@ export default function LogIn() {
   };
   function handleSubmit(e) {
     e.preventDefault();
-    console.log("You clicked submit.");
   }
 
   const handleClick = () => {
@@ -135,27 +134,6 @@ export default function LogIn() {
     setBooksToUpdate(booksToUpdate);
   };
   //////////////////////////////////////////////////////////////
-  // const handleConfirm = async (id) => {
-  //
-  //   const bookToUpdate = dataArr.find((book) => book.id === id);
-
-  //   const updatedBook = {
-  //     ...bookToUpdate,
-  //     title: titleUpdate,
-  //     image: imageUpdate,
-  //     price: priceUpdate,
-  //   };
-  //   const { data } = await axios.put(
-  //     `https://628e25fba339dfef87a87ada.mockapi.io/people/${id}`,
-  //     updatedBook
-  //   );
-  //   setData((prev) => {
-  //     return prev.map((book) => {
-  //       if (book.id === id) return data;
-  //       else return book;
-  //     });
-  //   });
-  // };
 
   const handlePopUp = () => {
     setPopUp(false);

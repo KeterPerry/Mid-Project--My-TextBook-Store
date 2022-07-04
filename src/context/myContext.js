@@ -22,6 +22,7 @@ function ContextProvider({ children }) {
   const [dataArr, setData] = useState([]);
   const [booksWithCounters, setBooksWithCounters] = useState([]);
   const [isSpinning, setSpinning] = useState(true);
+  const [cartCount, setCartCount] = useState(0);
   const [error, setError] = useState(
     "There has been an error. Please try again"
   );
@@ -69,6 +70,8 @@ function ContextProvider({ children }) {
         setDisplay1,
         booksWithCounters,
         setBooksWithCounters,
+        cartCount,
+        setCartCount,
       }}
     >
       {children}

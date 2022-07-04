@@ -3,17 +3,16 @@ import React, { useState, useContext } from "react";
 import axios from "axios";
 
 export default function BooksWithCounter(book) {
-  const { setData } = useContext(myContext);
+  const { setData, setCartCount } = useContext(myContext);
   const [dataWithCounters, setDataWithCounters] = useState(book);
   console.log(dataWithCounters.id);
 
   const handleCounterUp = async (id) => {
     setDataWithCounters((prev) => ({
       ...prev,
-      counter: dataWithCounters.counter + 1,
+      counter: prev.counter + 1,
     }));
-    //   const objectFound= dataWithCounters.find((element) => element.id === id)
-    // setDataWithCounters(dataWithCounters.counter + 1);
+    setCartCount((prev) => prev + 1);
 
     const updatedBook = dataWithCounters;
     const { data } = await axios.put(
@@ -30,14 +29,16 @@ export default function BooksWithCounter(book) {
   };
 
   const handleCounterDown = async (id) => {
-    setDataWithCounters((prev) => ({
-      ...prev,
-      counter: dataWithCounters.counter - 1,
-    }));
-    //   const objectFound= dataWithCounters.find((element) => element.id === id)
-    // setDataWithCounters(dataWithCounters.counter + 1);
-
+    setDataWithCounters((prev) => {
+      if (prev.counter > 0) return { ...prev, counter: prev.counter - 1 };
+      else return alert("Invalid"), { ...prev };
+    });
+    setCartCount((prev) => {
+      if (prev > 0) return prev - 1;
+      else return prev;
+    });
     const updatedBook = dataWithCounters;
+
     const { data } = await axios.put(
       `https://629dace63dda090f3c07a72b.mockapi.io/books/${id}`,
       updatedBook
@@ -50,7 +51,6 @@ export default function BooksWithCounter(book) {
       });
     });
   };
-
   return (
     <div key={book.id} className="item">
       <div>{dataWithCounters.title}</div>
