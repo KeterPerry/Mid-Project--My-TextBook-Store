@@ -42,26 +42,10 @@ export default function Shop() {
   /////////////////////////////////////////////////////
 
   const insertData = () => {
-    //   return dataArr.map((book) => (
-    //     <div key={book.id} className="item">
-    //       <div>{book.title}</div>
-    //       <img alt="#" src={book.image}></img>
-    //       <div>{book.price}</div>
-    //       <div style={{ display: "flex" }}>
-    //         <button onClick={() => handleCounterUp(book.counter)}>+</button>
-    //         <button>{counter}</button>
-    //         <button onClick={handleCounterDown}>-</button>
-    //       </div>
-    //     </div>
-    //   ));
-    // };
-
     const booksWithCounters = dataArr.map((book) => (
       <BooksWithCounter {...book} />
     ));
-    // setBooksWithCounters(booksWithCounters);
     return booksWithCounters;
-    // const booksToUpdate = data.map((book) => <BookUpdate {...book} />);
   };
   ///////////////////////////////////////////////////////////////////////////////
 

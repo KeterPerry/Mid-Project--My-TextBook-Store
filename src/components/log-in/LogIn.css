@@ -50,7 +50,7 @@ form {
     gap: 2rem; 
     position:absolute;
     background: rgba(54, 54, 118, 0.704);
-    width: 100%;
+    width: 65%;
     height: 100%;
     border: 2px solid black;
     border-radius: 5%; 

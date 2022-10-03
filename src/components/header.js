@@ -82,7 +82,8 @@ export default function Header() {
           {" "}
           <a
             rel="noreferrer"
-            href="https://www.facebook.com/home.php"
+            // href="https://www.facebook.com/home.php"
+            href="#"
             target="_blank"
           >
             {" "}
